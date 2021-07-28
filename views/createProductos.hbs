@@ -1,0 +1,62 @@
+<div class="container-fluid bg-dark m-0" style="height : 100vh">
+  <div class="container">
+    <div class="row align-items-center" style="height : 100vh">
+      <div class="col-12 text-light mt-4">
+        <div class="d-grid gap-2">
+          <h1>Nuevo Producto</h1>
+          <form method="post" action="/admin/productos/create" enctype="multipart/form-data">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control bg-light"
+                name="nombre"
+                placeholder="Ingrese el nombre del producto"
+              />
+              >
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control bg-light"
+                name="descripcion"
+                placeholder="descripcion del producto"
+              />
+              >
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control bg-light"
+                name="precio"
+                placeholder="precio por unidad"
+              />
+              >
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control bg-light"
+                name="stock"
+                placeholder="Cantidad disponible"
+              />
+              >
+            </div>
+            <div class="mb-3">
+              <select name="id_categoria" class="form-select">
+                {{#each categorias}}
+                  <option value="{{id}}"> {{nombre}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div>
+                    <label for="imagen">Agregar imagen<span class="text-danger">*</span></label>
+                    <input type="file" name="imagen" id="imagen">
+                </div>
+            <button type="submit" class="btn btn-info">agregar</button>
+          </form>
+          <p class="text-danger text-center mt-3">{{message}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

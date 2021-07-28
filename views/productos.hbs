@@ -1,0 +1,23 @@
+
+{{#each productos}}
+<div class=" container-fluid">
+<div class="card mb-2 bg-dark text-light " style="max-width: 1200px ">
+  <div class="cardProducto row g-0 mt-2 mb-2 ">
+    <div >     
+    </div>
+     <img src="/images/productos/{{uid}}"  class="rounded float-start col-md-4" style ="width: 120px;" alt="{{nombre}}">
+    <div class=" col-md-8">
+      <div class="card-body">
+        <h3 class="card-title">{{nombre}}</h3>
+        <h5 lass="card-text"> {{descripcion}}</h5>
+        <p class="card-text"> Precio: {{precio}}</p>
+        <p class="card-text"><small class="text-muted">{{nombreCategoria}}</small></p>
+        <a href="/productos/single/{{id}}" class="btn btn-secondary btn-sm">Ver mas</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  {{/each}}
+ 

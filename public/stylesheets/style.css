@@ -1,0 +1,53 @@
+/* Color Theme Swatches in Hex */
+.Teknisk-Museum-conference-1-hex { color: #6F1CA6; }
+.Teknisk-Museum-conference-2-hex { color: #5E188C; }
+.Teknisk-Museum-conference-3-hex { color: #8124BF; }
+.Teknisk-Museum-conference-4-hex { color: #9AC7D9; }
+.Teknisk-Museum-conference-5-hex { color: #F2F2F2; }
+
+
+
+body {
+  
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.bg-layout {
+  background-color: #b8b8b8;
+}
+
+
+.cardProducto {
+background-color: rgb(66, 66, 66);
+
+}
+/*colores de la navbar*/
+.bg-color {
+  background-color:rgb(241, 123, 123);
+  border-radius: 10px;
+  margin: auto; 
+}
+
+/*color del footer*/
+.bd-footer{
+  background-color: rgb(241, 123, 123);
+  border-radius: 5px;
+  display: flex
+}
+/* producto en single, mod tamaño de imagen y alinear imagen*/
+.bg-producto{
+  max-width: 300px;
+  align-content: center;
+}
+
+.carousel1{
+  max-width: 700px;
+  margin-left: 300px;
+}
+.logo{
+  border-radius: 25px;
+}
+.tucuman{
+  max-width: 450px;
+ 
+}

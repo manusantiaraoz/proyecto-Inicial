@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8">
+           <form method="post" action="/registro">
+           <div class="text-center mb-4 mt-4  text-light">
+        <h1 class="h3 mb-3 font-weight-normal">Santi Araoz</h1>
+        <p>distribuidora de agua en bidones y reparacion de equipos frio-calor  </p>
+      </div>
+            <div class="mb-3">
+                <label for="username" class="form-label">nombre</label>
+                <input type="text" class="form-control bg-Secondary" name= "username" id="username" placeholder="ingresa tu usuario" >
+            </div>
+            <div class="mb-3">
+                <label for="pass" class="form-label">Pass</label>
+                <input type="password" class="form-control bg-Secondary" name= "pass" id= "pass" placeholder="ingresa tu contraseña">
+            </div>
+            <div>
+              <label for="mail" class="form-label">mail</label>
+                <input type="email" class="form-control bg-Secondary"  name= "mail" id ="mail" placeholder="ingresa mail">
+            </div>
+            <div>
+              <label for="celular" class="form-label">Telefono</label>
+                <input type="number" class="form-control bg-Secondary"  name= "celular" id ="celular" placeholder="ingresa tu Telefono">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block bg-dark mt-4">registrate</button>
+            </form>
+            <p class="text-danger text-center mt-3">{{message}}</p>
+        </div>
+    </div>
+</div>

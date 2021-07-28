@@ -1,0 +1,71 @@
+<div class="container-fluid bg-dark m-0" style="height : 100vh">
+  <div class="container">
+    <div class="row align-items-center" style="height : 100vh">
+      <div class="col-12 text-light mt-4">
+        <div class="d-grid gap-2">
+          <h1>Modificando: {{producto.nombre}}</h1>
+          <form method="post" action="/admin/productos/update/{{producto.id}}"  enctype= "multipart/form-data" >
+            <div class="mb-3">
+                <label for="nombre">nombre<span class="text-danger">*</span></label>
+              <input
+                type="text"
+                class="form-control bg-light"
+                name="nombre"
+                id="nombre"
+                value= "{{producto.nombre}}"
+              />
+              >
+            </div>
+            <div class="mb-3">
+             <label for="descripcion">descripcion<span class="text-danger">*</span></label>
+              <input
+                type="text"
+                class="form-control bg-light"
+                name="descripcion"
+                id= "descripcion"
+                value= "{{producto.descripcion}}"
+              />
+              >
+            </div>
+            <div class="mb-3">
+            <label for="precio">precio<span class="text-danger">*</span></label>
+              <input
+                type="text"
+                class="form-control bg-light"
+                name="precio"
+                id= "precio"
+                value= "{{producto.precio}}"
+              />
+              >
+            </div>
+            <div class="mb-3">
+            <label for="stock">stock<span class="text-danger">*</span></label>
+              <input
+                type="text"
+                class="form-control bg-light"
+                name="stock"
+                id= "stock"
+                value= "{{producto.stock}}"
+              />
+              >
+            </div>
+            <div class="mb-3">
+              <select name="id_categoria" id="id_categoria" class="form-select">
+                  <option value="{{producto.id_categoria}}">{{producto.nombreCategoria}}</option>
+                {{#each categorias}}
+                  <option value="{{id}}"> {{nombre}}</option>
+                {{/each}}
+              </select>
+            </div>
+             <div>
+                    <label for="imagen">modificar imagen<span class="text-danger">*</span></label>
+                    <input type="file" name="imagen" id="imagen" >
+                </div>
+            <button type="submit" class="btn btn-info">modificar</button>
+          </form>
+           <p class="text-danger text-center mt-3">{{message}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container-fluid bg-dark ">
+    <div class="row ">
+        {{#each usuario}}
+        <div class="col-4 mt-8 ">
+            <div class="d-flex justify-content-end d-flex align-items-start"></div>
+            <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{username}}</h5>
+                <p class="card-text">celular: {{celular}}</p>
+                 <p class="card-text">mail: {{mail}}</p>
+                <a href="usuario/edit/{{id}}" class="btn btn-primary">editar</a>
+                </div>
+            </div>
+            </div>
+          {{/each}}
+         </div>
+    </div>
+</div>

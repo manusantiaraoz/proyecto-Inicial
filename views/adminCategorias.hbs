@@ -1,0 +1,39 @@
+<div
+  class="container-fluid bg-dark d-flex align-content-center flex-wrap"
+  style="height : 100vh"
+>
+  <h1 style="color:blanchedalmond">Categorias existentes</h1>
+  <table
+    class="table table-dark table-striped"
+    method="post"
+    action="/admin/categorias/delate/:id"
+  >
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripcion</th>
+      <th>-</th>
+      <th>-</th>
+    </tr>
+
+    {{#each Categorias}}
+      <tr>
+        <td>{{id}}</td>
+        <td>{{nombre}}</td>
+        <td>{{descripcion}}</td>
+        <td> -</td>
+        <td><a href="/admin/categorias/delate/{{id}}" class="btn btn-danger"><i
+              class="fas fa-trash-alt"
+            ></i>
+            Eliminar</a></td>
+      </tr>
+    {{/each}}
+  </table>
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <a
+      href="/admin/categorias/create"
+      class="btn btn"
+      style="background-color: #900C3F "
+    ><i class="fas fa-pen-square"></i>Añadir Categoria</a>
+  </div>
+</div>

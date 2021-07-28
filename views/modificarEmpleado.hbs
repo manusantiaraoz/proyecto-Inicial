@@ -1,0 +1,54 @@
+<div class="container-fluid bg-dark m-0" style="height : 100vh">
+  <div class="container">
+    <div class="row align-items-center" style="height : 100vh">
+      <div class="col-12 text-light mt-4">
+        <div class="d-grid gap-2">
+          <h1>Modificar {{empleado.nombre}} {{empleado.apellido}}</h1>
+          <form method="post" action="/admin/empleados/update/{{empleado.id}}" enctype="multipart/form-data">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control bg-light"
+                name="nombre"
+                value= "{{empleado.nombre}}"
+              />
+              >
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control bg-light"
+                name="apellido"
+                value="{{empleado.apellido}}"
+              />
+              >
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control bg-light"
+                name="telefono"
+                value="{{empleado.telefono}}"
+              />
+              >
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control bg-light"
+                name="direccion"
+                value="{{empleado.direccion}}"
+              />
+              >
+              <div>
+                    <label for="imagen">modificar imagen<span class="text-danger">*</span></label>
+                    <input type="file" name="imagen" id="imagen" >
+                </div>
+            </div>
+            <button type="submit" class="btn btn-info">modificar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
